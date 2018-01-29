@@ -1,0 +1,25 @@
+CREATE DATABASE DEADLINETRACKER;
+
+USE DEADLINETRACKER;
+
+CREATE TABLE User (
+Username VARCHAR(20) PRIMARY KEY,
+Password VARCHAR(30) NOT NULL,
+Email VARCHAR(45) NOT NULL);
+
+CREATE TABLE Deadlines (
+DeadlineID INT AUTO_INCREMENT PRIMARY KEY,
+Username VARCHAR(20),
+Title VARCHAR(40) NOT NULL,
+DeadlineTime DATETIME NOT NULL,
+Catogory ENUM('Work', 'Personal', 'School'),
+Notes TEXT,
+CONSTRAINT FK_User FOREIGN KEY (Username) REFERENCES User(Username));
+
+
+CREATE TABLE Notifications (
+NotificationID INT AUTO_INCREMENT PRIMARY KEY,
+DeadlineID INT,
+Type ENUM('Weekly', 'Annual', 'Daily', 'Monthly'),
+NotificationTime DATETIME,
+CONSTRAINT FK_Deadlines FOREIGN KEY (DeadlineID) REFERENCES Deadlines(DeadlineID));
