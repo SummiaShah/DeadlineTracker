@@ -1,0 +1,13 @@
+body {
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+#calendar {
+  border: 1px solid black;
+  margin: 20px;
+  padding: 25px;
+}
