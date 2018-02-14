@@ -22,6 +22,8 @@
         popupRegister.onclick = function() {
 
           document.getElementById("formTitle").textContent = "Register";
+          document.getElementById("loginForm").action = "scripts/registration.php";
+          document.getElementById("submitButton").name = "register";
 
           var emailField = document.createElement('input');
           var prevNode = document.getElementById("password");
@@ -46,12 +48,13 @@
   <body class="text-center">
     <div class="white-background">
        <!--REMINDER: update here when log in script is ready-->
-      <form id="loginForm" class="form-signin" action='../script/sign-in.php'>
+      <form id="loginForm" class="form-signin" action='scripts/login.php' method="POST">
         <div class="mb-3"><h2 id="formTitle">Sign in</h2></div>
         <input type="textfield" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
         <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
 
-        <button class="btn btn-lg btn-primary btn-block" id="submitButton" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" id="submitButton" name="login" type="submit">Sign in</button>
+
         <p id="promptRegister" class="text-center font-weight-light">Don't have an account yet? <br>
           <a id="popupRegister" href="http://www.placeholder.com">Click Here</a>
       </form>
