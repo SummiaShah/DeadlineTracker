@@ -1,17 +1,32 @@
-<form action="registration.php">
+<form action="scripts/createDeadline.php">
   <div class="container">
-    <h1>Add a deadline </h1>
-   
+    <h1>Add deadline</h1>
+    <p>Add a deadline</p>
     <hr>
+    
+    <label for="Date"><b>select date to be reminded</b></label>
+    <input type="date" name="date">
+  	<input type="submit" value="Send">
 
-    <label for="adddeadline"><b>Add a deadline</b></label>
-    <input type="text" placeholder="Deadline" name="deadline" required>
+    
+    <label for="category"><b> Select priority level</b></label>
+    <select name="menu">
+	<option value="0" selected> (select category)</option>
+    <option value="1">urgent</option>
+    <option value="2">warning</option>
+    <option value="3">not urgent</option>
+    <option value="other">other, please specify:</option>
+    </select>
+
+    <label for="add deadline"><b>Deadline</b></label>
+    <textarea name="Add" form="usrform">Enter deadline and notes</textarea required>
+    
 
   
 
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="Add deadline">Add</button>
+      <button type="submit" class="Add">Finish</button>
     </div>
   </div>
 </form>
