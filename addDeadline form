@@ -1,0 +1,17 @@
+<form action="registration.php">
+  <div class="container">
+    <h1>Add a deadline </h1>
+   
+    <hr>
+
+    <label for="adddeadline"><b>Add a deadline</b></label>
+    <input type="text" placeholder="Deadline" name="deadline" required>
+
+  
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="Add deadline">Add</button>
+    </div>
+  </div>
+</form>
