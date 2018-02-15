@@ -6,7 +6,7 @@
     
     <label for="Date"><b>select date to be reminded</b></label>
     <input type="date" name="date">
-  	<input type="submit" value="Send">
+  	<input type="submit" value="submit">
 
     
     <label for="category"><b> Select priority level</b></label>
